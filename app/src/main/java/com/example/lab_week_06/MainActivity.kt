@@ -59,6 +59,55 @@ class MainActivity : AppCompatActivity() {
                 "Curious George",
                 "Award winning investigator",
                 "https://cdn2.thecatapi.com/images/bar.jpg"
+            ),
+            CatModel(
+                Gender.Female,
+                CatBreed.ExoticShorthair,
+                "Luna",
+                "Loves tuna and naps",
+                "https://cdn2.thecatapi.com/images/5kl.jpg"
+            ),
+            CatModel(
+                Gender.Male,
+                CatBreed.AmericanCurl,
+                "Simba",
+                "King of the living room",
+                "https://cdn2.thecatapi.com/images/d55.jpg"
+            ),
+            CatModel(
+                Gender.Male,
+                CatBreed.BalineseJavanese,
+                "Oreo",
+                "Master of hiding",
+                "https://cdn2.thecatapi.com/images/47s.jpg"
+            ),
+            CatModel(
+                Gender.Female,
+                CatBreed.ExoticShorthair,
+                "Bella",
+                "Very vocal and playful",
+                "https://cdn2.thecatapi.com/images/b6d.jpg"
+            ),
+            CatModel(
+                Gender.Male,
+                CatBreed.AmericanCurl,
+                "Max",
+                "A true gentleman",
+                "https://cdn2.thecatapi.com/images/ebv.jpg"
+            ),
+            CatModel(
+                Gender.Unknown,
+                CatBreed.BalineseJavanese,
+                "Mochi",
+                "Sweet and fluffy",
+                "https://cdn2.thecatapi.com/images/9us.jpg"
+            ),
+            CatModel(
+                Gender.Female,
+                CatBreed.ExoticShorthair,
+                "Lucy",
+                "Loves chasing laser pointers",
+                "https://cdn2.thecatapi.com/images/a2b.jpg"
             )
         )
 
