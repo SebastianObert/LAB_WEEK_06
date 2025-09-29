@@ -8,14 +8,14 @@ import com.example.lab_week_06.model.CatBreed
 import com.example.lab_week_06.model.CatModel
 import com.example.lab_week_06.model.Gender
 
-
 private const val FEMALE_SYMBOL = "♀"
 private const val MALE_SYMBOL = "♂"
 private const val UNKNOWN_SYMBOL = "?"
 
 class CatViewHolder(
-    containerView: View,
-    private val imageLoader: ImageLoader
+    private val containerView: View,
+    private val imageLoader: ImageLoader,
+    private val onClickListener: OnClickListener
 ) : RecyclerView.ViewHolder(containerView) {
 
     private val catBiographyView: TextView by lazy { containerView.findViewById(R.id.cat_biography) }
@@ -25,6 +25,10 @@ class CatViewHolder(
     private val catPhotoView: ImageView by lazy { containerView.findViewById(R.id.cat_photo) }
 
     fun bindData(cat: CatModel) {
+        containerView.setOnClickListener {
+            onClickListener.onItemClick(cat)
+        }
+
         imageLoader.loadImage(cat.imageUrl, catPhotoView)
         catNameView.text = cat.name
         catBiographyView.text = cat.biography
@@ -40,5 +44,9 @@ class CatViewHolder(
             Gender.Male -> MALE_SYMBOL
             Gender.Unknown -> UNKNOWN_SYMBOL
         }
+    }
+
+    interface OnClickListener {
+        fun onItemClick(cat: CatModel)
     }
 }
